@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        //Connect to the Parse "application"
+        var applicationId = "PQa65T3P174tjMXVJkZeGwKcGCSGk9gSN5RiPILw"
+        var clientKey = "bHhyCGjNlD0wtGLppYnseHD7Z0WrJGONsYO9jmyo"
+        Parse.setApplicationId(applicationId, clientKey: clientKey)
+        //Create and "automatic user" rather than requiring login
+        PFUser.enableAutomaticUser()
         return true
     }
 
